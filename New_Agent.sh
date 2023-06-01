@@ -32,8 +32,6 @@ else
 fi
 
 
-
-
 #Get Token
 #Use '-r' to het raw data, so without quotes
 #
