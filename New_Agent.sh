@@ -2,6 +2,7 @@
 #
 #https://spacetraders.io/
 
+echo "Enter Agent name: "
 read AgentName
    
 case $AgentName
@@ -16,6 +17,21 @@ curl --silent --request POST  \
   --url 'https://api.spacetraders.io/v2/register' \
   --header 'Content-Type: application/json' \
   --data "{ \"symbol\": \"$AgentName\", \"faction\": \"COSMIC\"}" > New_Agent.json
+
+
+ReturnCode=$(jq '.[] |.code' New_Agent.json)
+ReturnError=$(jq '.error.data.symbol[0]' New_Agent.json)
+
+if [ $ReturnCode == "422" ]
+then
+  echo "Something went wrong"
+  echo "$ReturnError" 
+  exit 1
+else 
+  echo "Agent $AgentName created" 
+fi
+
+
 
 
 #Get Token
