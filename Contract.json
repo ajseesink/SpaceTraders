@@ -1,1 +1,1 @@
-
+{ "id": "clicz4frbd6sps60d3p018as2", "factionSymbol": "COSMIC", "type": "PROCUREMENT", "terms": { "deadline": "2023-06-08T10:08:35.760Z", "payment": { "onAccepted": 2976, "onFulfilled": 11904 }, "deliver": [ { "tradeSymbol": "PLATINUM_ORE", "destinationSymbol": "X1-VS75-70500X", "unitsRequired": 930, "unitsFulfilled": 0 } ] }, "accepted": false, "fulfilled": false, "expiration": "2023-06-02T10:08:35.760Z", "deadlineToAccept": "2023-06-02T10:08:35.760Z" }
