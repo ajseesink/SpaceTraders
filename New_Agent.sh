@@ -12,14 +12,11 @@ in
       echo "checking availability" ;;
 esac
 
+curl --silent --request POST  \
+  --url 'https://api.spacetraders.io/v2/register' \
+  --header 'Content-Type: application/json' \
+  --data "{ \"symbol\": \"$AgentName\", \"faction\": \"COSMIC\"}" > New_Agent.json
 
-curl --silent --request POST \
- --url 'https://api.spacetraders.io/v2/register' \
- --header 'Content-Type: application/json' \
- --data '{
-    "symbol": "AgentName",
-    "faction": "COSMIC"
-   }' > New_Agent.json
 
 #Get Token
 #Use '-r' to het raw data, so without quotes
